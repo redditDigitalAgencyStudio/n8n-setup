@@ -1,0 +1,16 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=server2.bosonware.com
+      - N8N_PROTOCOL=https
+      - N8N_PORT=5678
+      - GENERIC_TIMEZONE=Africa/Nairobi
+      - N8N_ENCRYPTION_KEY=change_this_to_a_random_string
+    volumes:
+      - n8n_data:/home/node/.n8n
+volumes:
+  n8n_data:
