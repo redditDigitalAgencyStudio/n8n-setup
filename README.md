@@ -6,7 +6,7 @@ docker compose up -y
 
 # Cloudflare Tunnels:
 ```bash
-docker run -d --network host cloudflare/cloudflared:latest tunnel --no-autoupdate run --token <TOKEN>
+docker run -d --network host cloudflare/cloudflared:latest tunnel --no-autoupdate run --token <CLOUDFLARE_TOKEN>
 ```
 
 It's recommended that you use a Linux server or WSL2
